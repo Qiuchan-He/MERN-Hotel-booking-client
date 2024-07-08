@@ -1,0 +1,17 @@
+.point {
+    cursor: pointer;
+}
+
+.ant-modal-footer {
+    display: none;
+}
+
+
+.btn-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 38px;
+} 
+
