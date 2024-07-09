@@ -5,7 +5,7 @@ import { getAccountStatus } from "../actions/stripe.js";
 import { updateUserInLocalStorage } from "../actions/auth.js";
 
 
-const StripeCallback = ({})=>{
+const StripeCallback = ({history})=>{
     const {auth} = useSelector((state)=>({...state}))
     const dispatch = useDispatch();
 
@@ -26,7 +26,7 @@ const StripeCallback = ({})=>{
                 })
 
                 //redirect user to dashboard
-                location.href = "/dashboard/seller";
+                history.push("/dashboard/seller");
             })
 
         }catch (err) {
