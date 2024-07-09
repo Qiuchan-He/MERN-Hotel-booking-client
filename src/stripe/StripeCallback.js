@@ -12,7 +12,7 @@ const StripeCallback = ({})=>{
     useEffect(()=>{
         if(auth && auth.token)
             accountStatus();
-    },[auth])
+    },[])
 
     const accountStatus = async ()=>{
         try {
@@ -26,7 +26,7 @@ const StripeCallback = ({})=>{
                 })
 
                 //redirect user to dashboard
-                window.location.href = "/dashboard/seller";
+                location.href = "/dashboard/seller";
             })
 
         }catch (err) {
