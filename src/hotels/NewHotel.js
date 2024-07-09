@@ -42,7 +42,7 @@ const NewHotel = () => {
       if(res.status === 200){
         toast.success("New hotel is posted");
       setTimeout(() => {
-        window.location.reload();
+        history.push('/dashboard/seller');
       }, 1000);
     }
     }catch(err){
