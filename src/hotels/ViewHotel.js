@@ -13,7 +13,7 @@ const ViewHotel = ({ match, history }) => {
   const [alreadyBooked, setAlreadyBooked] = useState(false);
   useEffect(() => {
     loadSellerHotel();
-  });
+  },[]);
 
   useEffect(() => {
     if (auth && auth.token) {
@@ -21,7 +21,7 @@ const ViewHotel = ({ match, history }) => {
         setAlreadyBooked(res.data.ok)
       );
     }
-  });
+  },[]);
 
   const loadSellerHotel = async () => {
     let res = await readHotel(match.params.hotelId);
